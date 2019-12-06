@@ -1,0 +1,20 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar dados</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Nome:</label>
+                    <input [(ngModel)]="pessoa.nome" name="nome" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Sobrenome:</label>
+                    <input [(ngModel)]="pessoa.sobrenome" name="sobrenome" type="text" class="form-control">
+                </div>
+                <button (click)="salvar()" class="btn btn-danger">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</div>
