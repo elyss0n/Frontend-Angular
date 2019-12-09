@@ -26,4 +26,7 @@ export class ServiceService {
   deletarPessoa(pessoa: Pessoa) {
     return this.http.delete<Pessoa>(this.url + '/' + pessoa.id);
   }
+  pesquisarNome(nome: string) {
+    return this.http.post<Pessoa[]>(this.url + '/pesquisarpessoa', nome);
+  }
 }

@@ -30,5 +30,10 @@ export class ConsultarComponent implements OnInit {
       alert('Registro deletado!');
     });
   }
+  pesquisarNome(nomePesquisa: string) {
+    this.service.pesquisarNome(nomePesquisa).subscribe(data => {
+      this.pessoas = data;
+    });
+  }
 
 }

@@ -4,6 +4,17 @@
             <h3>Pessoas</h3>
         </div>
         <div class="card-body">
+            <!---->
+            <div class="container">
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Pesquisar por nome/sobrenome:</label>
+                        <input [(ngModel)]="nomepesquisa" name="nomepesquisa" type="text" style="margin: 0 10px;">
+                        <button (click)="pesquisarNome(nomepesquisa)" class="btn btn-info">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <!---->
             <table class="table text-center table-hover">
                 <thead>
                     <tr>
