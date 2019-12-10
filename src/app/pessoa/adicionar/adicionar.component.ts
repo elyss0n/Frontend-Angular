@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/service/service.service';
 import { Pessoa } from 'src/app/Model/Pessoa';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-adicionar',
@@ -18,7 +19,11 @@ export class AdicionarComponent implements OnInit {
   }
   adicionar() {
     this.service.criarPessoa(this.pessoa).subscribe(data => {
-      alert('Salvo com sucesso!');
+      Swal.fire(
+        '',
+        'Adicionado com sucesso!',
+        'success'
+      );
       this.router.navigate(['consultar']);
     });
   }

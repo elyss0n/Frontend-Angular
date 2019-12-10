@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/service/service.service';
 import { Pessoa } from 'src/app/Model/Pessoa';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar',
@@ -26,7 +27,11 @@ export class EditarComponent implements OnInit {
   salvar() {
     this.service.editarPessoa(this.pessoa).subscribe(data => {
       this.pessoa = data;
-      alert('Atualizado com sucesso!');
+      Swal.fire(
+        '',
+        'Atualizado com sucesso!',
+        'success'
+      );
       this.router.navigate(['consultar']);
     });
   }
