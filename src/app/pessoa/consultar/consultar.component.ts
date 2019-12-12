@@ -50,9 +50,15 @@ export class ConsultarComponent implements OnInit {
   }
 
   pesquisarNome(nomePesquisa: string) {
-    this.service.pesquisarNome(nomePesquisa).subscribe(data => {
-      this.pessoas = data;
-    });
+    if (!nomePesquisa) {
+      this.service.getPessoas().subscribe(data => {
+        this.pessoas = data;
+      });
+    } else {
+      this.service.pesquisarNome(nomePesquisa).subscribe(data => {
+        this.pessoas = data;
+      });
+    }
   }
 
 }
