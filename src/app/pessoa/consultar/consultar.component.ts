@@ -42,7 +42,7 @@ export class ConsultarComponent implements OnInit {
         });
         Swal.fire(
           'Deletado!',
-          'Regsitro deletado com sucesso.',
+          'Registro deletado com sucesso.',
           'success'
         );
       }
